@@ -1,0 +1,19 @@
+{% if results %}
+<table border='1'>
+<tr>
+<td>task_id</td>
+<td>done_date</td>
+<td>result</td>
+<td>status</td>
+</tr>
+{% for result in results %}
+<tr>
+<th>{{result.task_id}}</th>
+<th>{{result.date_done}}</th>
+<th>{{result.result}}</th>
+<th>{{result.status}}</th>
+</tr>
+{% endfor %}
+{% else %}
+there is no task status.
+{% endif %}

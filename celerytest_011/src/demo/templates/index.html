@@ -1,0 +1,14 @@
+ {% if errors%}
+  <ul>
+    {% for error in errors %}
+    <li>{{error}}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {{ task }}
+  <form action="" method="POST">
+  {% csrf_token %} 
+  <input type='text' name='a' />
+  <input type='text' name='b' />
+  <input type='submit' value='add' />
+  </form>
